@@ -1,0 +1,68 @@
+/* iphone 5 Media Query */
+/* -- main css */
+
+/* tablet Media Query */
+@media screen and (max-width: 768px) and (min-width: 321px) {
+    nav{
+        left: 40px;
+        right: 40px;
+        max-width: 688px;
+        width: 100%;
+    }
+    #hero h1{
+        top: 160px;
+    }
+    #hero h3{
+        top: 221px;
+        font-size: 22px;
+    }
+    #search{
+        width: 580px;
+    }
+    form{
+        top: 300px;
+    }
+    #people, #budget, #findEvent{
+        width: 30%;
+        display: inline-block;
+    }
+    .hidden{
+        display: inline-block;
+    }
+    #hero{
+        height: 550px;   
+        background-position: left -280px top -295px
+    }
+
+}
+
+/* desktop Media Query */
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+    nav{
+        left: 40px;
+        right: 40px;
+        max-width: 1200px;
+        width: 100%;
+    }
+    #hero h1{
+        top: 160px;
+        font-size: 64px;
+    }
+    #hero h3{
+        top: 244px;
+        font-size: 32px;
+    }
+    #hero{
+        height: 745px;   
+        background-position: top -100px left 0px;   
+    }
+    .hidden{
+        display: inline-block;
+    }
+    form{
+        width: 237px;
+        margin: o auto;
+        display: block;
+    }
+}
+

@@ -1,0 +1,222 @@
+@font-face{
+    font-family: LatoBold;
+    src: url(fonts/Lato-Bold.ttf);
+}
+@font-face{
+    font-family: LatoRegular;
+    src: url(fonts/Lato-Regular.ttf);
+}
+@font-face{
+    font-family: LatoLight;
+    src: url(fonts/Lato-Light.ttf);
+}
+
+h1{
+    font-family: "LatoLight", sans-serif;
+    font-size: 42px;
+    color: rgba(255,255,255,1);
+}
+h3{
+    font-family: "LatoLight", sans-serif;
+    font-size: 22px;
+    color: rgba(255,255,255,1);
+}
+h4{
+    font-family: "LatoRegular";
+    font-size: 18px;
+    color: rgba(277,106,76,1);
+}
+h5{
+    font-size: 12px;
+    font-family: 'LatoRegular';
+    color: rgba(179,181,190,1);
+}
+body{
+    font-family: "LatoRegular", sans-serif;
+    overflow-x: none;
+}
+.hidden{
+    display: none;
+}
+nav{
+    position: absolute;
+    left: 21px;
+    width: 280px;
+    top: 20px;
+    z-index: 10;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    margin-right: 15px;
+}
+
+.joinUs{
+    width: 90px;
+    height: 40px;
+    background-color: RGBA(255,255,255,1);
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: 'LatoBold';
+    color: RGBA(227,105,76,1);
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+ul li{
+ list-style-type: none;
+ position: relative;
+ display: inline-block;
+ line-height: 50px;
+ font-size: 12px;
+ color: white;
+}
+#hero{
+    position: relative;
+    display: block;
+    background-image: url('../img/hero.png');
+    height: 642px;
+    background-position: left -430px top -203px;
+}
+#hero h1{
+    position: absolute;
+    text-align: center;
+    top: 132px;
+    width: 100%;
+    z-index: 2;
+    line-height: 46px;
+}
+#hero h3{
+    position: absolute;
+    text-align: center;
+    top: 297px;
+    width: 100%;
+    z-index: 2;
+    line-height: 32px;
+}
+#hero .mask{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.65;
+    background: #5C4E48;
+    background-image: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0.00) 100%);
+
+}
+form{
+    display: block;
+    position: absolute;
+    top: 401px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+#search{
+    position: relative;
+    display: block;
+    font-size: 15px;
+    color: rgba(155,157,160,1);
+    font-family: 'LatoBold';
+    height: 50px;
+    line-height: 50px;
+    width: 280px;
+    border-radius: 3px;
+    z-index: 2;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+}
+#people{
+    float: left;
+}
+#budget{
+    float: right;
+}
+#people, #budget{
+    width: 136px;
+    margin: 12px 0;
+    height: 50px;
+    display: inline-block;
+    background-color: rgba(255,255,255,1);
+    border: none;
+
+}
+#findEvent{
+    position: relative;
+    display: block;
+    width: 280px;
+    font-family: 'LatoBold';
+    color: rgba(255,255,255,1);
+    background-color: rgba(144,196,91,1);
+    height: 50px;
+    border-radius: 3px;
+    z-index: 2;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+    
+}
+#content ul{
+    margin-left: 21px;
+    margin-top: 30px;
+}
+#content ul li{
+    color: rgba(77,79,86,1);
+    font-size: 15px;
+    padding-right: 20px;
+    display: inline-block;
+}
+.thumb{
+    width: 280px;
+    display: block;
+    background-image: url('../img/chesney.png');
+    background-position: left -63px top 0px;
+    background-size: 427px 261px; 
+    height: 261px;
+}
+.eventBox{
+    padding: 30px 20px;
+}
+.contentBox{
+    padding: 20px 0
+}
+.contentBox h4{
+    padding: 5px 0 7px 0;
+}
+
+.local{
+    border-top: 1px solid rgba(179,181,190,.4);
+    border-right: 1px solid rgba(179,181,190,.4);
+    width:50%;
+    display: inline-block;
+    padding: 15px 15px 10px 0;
+}
+.local h5{
+    text-align: right;
+    padding-bottom: 8px;
+}
+.fieldData{
+    display: block;
+    font-family: 'LatoLight';
+    font-size: 16px;
+    color: rgba(77,79,86,1);
+}
+.local .fieldData{
+    text-align: right;
+}
+.price{
+    border-top: 1px solid rgba(179,181,190,.4);
+    width:50%;
+    display: inline-block;
+    padding: 15px 15px 10px 0;
+}
+.price h5{
+    padding-bottom: 8px;
+}

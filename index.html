@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- Meta Data -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Styling -->
+        <link rel="stylesheet" type="text/css" href="css/meyerwebReset.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    </head>
+    <body>
+        <nav>
+            <img src="img/logo.png">
+            <ul>
+                <a href="#" class="hidden"><li>Browse</li></a>
+                <a href="#" class="hidden"><li>Discover</li></a>
+                <a href="#" class=""><li>Add Event</li></a>
+                <a href="#"><li class="joinUs">Join us</li></a>
+            </ul>
+        </nav>
+        <div id=hero>
+            <h1>Amazing performances near you</h1>
+            <h3>Discover the top live music events in the Southeast</h3>
+            <form>
+                <input id="search" type="text" placeholder="Enter your favorite artist or genre">
+                <select id="people">
+                    <option value="" default disabled>Location</option>
+                </select>
+                <select id="budget">
+                    <option value="" default disabled>Location</option>                        
+                </select>
+                <input id="findEvent" type="submit" value="Find events">
+            </form>
+            <div class="mask"></div>
+        </div>
+        <div id=content>
+            <ul>
+                <a href="#"><li>Most Popular</li></a>
+                <a href="#"><li>Coming up</li></a>
+                <a href="#"><li>Near you</li></a>
+            </ul>
+            <div id="events">
+                <div id="event1" class="eventBox">
+                    <div class="thumb"></div>
+                    <div class="contentBox">
+                        <h5>COUNTRY</h5>
+                        <h4>Kenny Chesney w/ Grace Potter</h4>
+                        <div class="local">
+                            <h5>LOCATION</h5>
+                            <span class="fieldData">Nashville, TN</span>
+                        </div>
+                        <div class="price">
+                            <h5>PRICE</h5>
+                            <span class="fieldData">$30-260</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="event2" class="eventBox">
+                    <img src="#">
+                    <h5>JAZZ</h5>
+                    <h4>GERALD ALBRIGHT BAND</h4>
+                    <div class="local">
+                        LOCATION
+                        Atlanta, GA
+                    </div>
+                    <div class="price">
+                        PRICE
+                        $15-90
+                    </div>
+                </div>
+                <div id="event3" class="eventBox">
+                    <img src="#">
+                    <h4>ELECTRONIC ROCK</h4>
+                    <h3>The Rock Church</h3>
+                    <div class="local">
+                        LOCATION
+                        Birmingham, AL
+                    </div>
+                    <div class="price">
+                        PRICE
+                        $20-40
+                    </div>
+                </div>
+                <button id="discover">Discover more</button>
+            </div>
+        </div>
+        <footer>
+            <div id="footerLinks">
+                &copy; Aptaxle
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            <div id="social">
+                <a href=""><img src=""></a>
+                <a href=""><img src=""></a>
+                <a href=""><img src=""></a>
+            </div>
+        </footer>
+    </body>
+</html>
