@@ -113,8 +113,10 @@ form{
     display: block;
     position: absolute;
     top: 401px;
-    left: 20px;
-    right: 20px;
+    left: 0;
+    right: 0;
+    width: 280px;
+    margin: auto;
     z-index: 2;
 }
 
@@ -123,18 +125,29 @@ form{
     display: block;
     font-size: 15px;
     color: rgba(155,157,160,1);
-    font-family: 'LatoBold';
+    font-family: 'LatoRegular';
     height: 50px;
     line-height: 50px;
-    width: 280px;
+    width: 100%;
     border-radius: 3px;
     z-index: 2;
     margin: 0 auto;
     border: none;
-    text-align: center;
+    padding-left: 20px;
 }
 #people{
     float: left;
+}
+.customDrop{
+    background-image: url('../img/Arrow.png');
+    background-position: right 20px center;
+    background-size:
+        12.05px 6.08px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    font-size: 15px;
+    color: rgba(155,157,160,1);
+    font-family: 'LatoRegular';
 }
 #budget{
     float: right;
@@ -174,16 +187,12 @@ form{
     display: inline-block;
 }
 .thumb{
-    width: 280px;
     display: block;
-    background-image: url('../img/chesney.png');
-    background-position: left -63px top 0px;
-    background-size: 427px 261px; 
+    /* background-position: left -63px top 0px;
+    background-size: 427px 261px;  */
     height: 261px;
 }
-.eventBox{
-    padding: 30px 20px;
-}
+
 .contentBox{
     padding: 20px 0
 }
@@ -191,32 +200,75 @@ form{
     padding: 5px 0 7px 0;
 }
 
-.local{
+table{
+    width: 100%;
+}
+table tr:first-child td{
     border-top: 1px solid rgba(179,181,190,.4);
+    padding: 15px 15px 0px 15px;
+    font-size: 12px;
+    color: rgba(179,181,190,1);
+}
+table td{
+    width: 50%;
+}
+
+table tr td:first-child{
     border-right: 1px solid rgba(179,181,190,.4);
-    width:50%;
-    display: inline-block;
-    padding: 15px 15px 10px 0;
 }
-.local h5{
-    text-align: right;
-    padding-bottom: 8px;
-}
-.fieldData{
-    display: block;
+table tr:last-child td{
+    padding: 6px 15px 10px 15px;
     font-family: 'LatoLight';
     font-size: 16px;
     color: rgba(77,79,86,1);
 }
-.local .fieldData{
+
+.text-right{
     text-align: right;
 }
-.price{
-    border-top: 1px solid rgba(179,181,190,.4);
-    width:50%;
-    display: inline-block;
-    padding: 15px 15px 10px 0;
+#discover{
+    position: relative;
+    display: block;
+    margin: 0 auto 50px auto;
+    width: 188px;
+    height: 50px;
+    font-size: 15px;
+    font-family: 'LatoBold';
+    background-color: rgba(255,255,255,1);
+    border: 1px solid #B3B5BE;
+    border-radius: 3px;
+    color: rgba(144,196,91,1);
 }
-.price h5{
-    padding-bottom: 8px;
+footer{
+    border-top: 1px solid rgba(179,181,190,0.40);
+    padding: 35px;
 }
+#footerLinks{
+    text-align: center;
+}
+footer li, footer li a{
+    color: rgba(179,181,190,1);
+    font-size: 13px;
+    padding: 0 3px;
+}
+#social {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+#social img{
+    margin: 10px 10px;
+}
+#events{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 30px 20px;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }

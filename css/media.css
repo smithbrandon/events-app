@@ -16,14 +16,13 @@
         top: 221px;
         font-size: 22px;
     }
-    #search{
-        width: 580px;
-    }
     form{
         top: 300px;
+        width: 580px;
     }
     #people, #budget, #findEvent{
-        width: 30%;
+        width: 32%;
+        float: none;
         display: inline-block;
     }
     .hidden{
@@ -33,11 +32,49 @@
         height: 550px;   
         background-position: left -280px top -295px
     }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+    .eventBox:not(:first-child){
+        display: inline-block;
+        width: 50%;
+    }
+    .eventBox:first-child .thumb{
+        width: 688px;
+        height: 320px;
+    }
+    .eventBox:not(:first-child){
+        width:325px;
+    }
+    .eventBox:not(:first-child):nth-child(even){
+        float: left;
+    }
+    .eventBox:not(:first-child):nth-child(even){
+        float: right;
+    }
+    #budget{
+        margin-right: 1.25%;
+        margin-left: 1.25%;
+    }
+    h4{
+        font-size: 20px;
+    }
 
+    #events{
+        padding: 30px 40px;
+    }
+    #content ul{
+        margin-left: 40px;
+    }
 }
 
 /* desktop Media Query */
-@media screen and (max-width: 1280px) and (min-width: 769px) {
+@media screen and (min-width: 769px) {
     nav{
         left: 40px;
         right: 40px;
@@ -60,9 +97,52 @@
         display: inline-block;
     }
     form{
-        width: 237px;
-        margin: o auto;
-        display: block;
+        width: 580px;
     }
+    form{
+        top: 345px;
+        width: 580px;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .eventBox{
+        display: inline-block;
+        width:32%;
+    }
+    .eventBox:nth-child(3n + 2){
+        margin: 2%;
+    }
+    #budget{
+        margin-right: 1.25%;
+        margin-left: 1.25%;
+    }
+    h4{
+        font-size: 20px;
+    }
+    #events{
+        padding: 30px 84px;
+    }
+    #content ul{
+        margin-left: 84px;
+    }
+    .contentBox h4{
+        padding: 5px 0 17px 0;
+    }
+    table tr:last-child td{
+        font-size: 18px;
+    }
+
 }
 

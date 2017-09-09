@@ -1,0 +1,42 @@
+<div id=hero>
+        <h1>Amazing performances near you</h1>
+        <h3>Discover the top live music events in the Southeast</h3>
+        <form>
+            <input id="search" type="text" placeholder="Enter your favorite artist or genre">
+            <select id="people" class="customDrop">
+                <option value="" default>Location</option>
+            </select>
+            <select id="budget" class="customDrop">
+                <option value="" default>Budget</option>                        
+            </select>
+            <input id="findEvent" type="submit" value="Find events">
+        </form>
+        <div class="mask"></div>
+    </div>
+    <div id=content>
+        <ul>
+            <a href="#"><li>Most Popular</li></a>
+            <a href="#"><li>Coming up</li></a>
+            <a href="#"><li>Near you</li></a>
+        </ul>
+        <div id="events">
+            <div id="event{{event.id}}" class="eventBox" ng-repeat="event in events">
+                <div class="thumb" ng-style="setImage(event.image)"></div>
+                <div class="contentBox">
+                    <h5>{{event.type | uppercase }}</h5>
+                    <h4>{{event.title}}</h4>
+                    <table>
+                        <tr>
+                            <td class="text-right">LOCATION</td>
+                            <td>PRICE</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">{{event.city}}, {{event.state}}</td>
+                            <td>{{event.priceLow | currency: "$": 0}}-{{event.priceHigh | number}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button id="discover">Discover more</button>
+    </div>

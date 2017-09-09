@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="eventManager">
     <head>
         <!-- Meta Data -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,14 @@
         <link rel="stylesheet" type="text/css" href="css/meyerwebReset.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/media.css">
+        
+        <!-- Library Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        
+        <!-- Controllers -->
+        <script src="js/controllers/main.js"></script>
 
     </head>
     <body>
@@ -20,82 +28,19 @@
                 <a href="#"><li class="joinUs">Join us</li></a>
             </ul>
         </nav>
-        <div id=hero>
-            <h1>Amazing performances near you</h1>
-            <h3>Discover the top live music events in the Southeast</h3>
-            <form>
-                <input id="search" type="text" placeholder="Enter your favorite artist or genre">
-                <select id="people">
-                    <option value="" default disabled>Location</option>
-                </select>
-                <select id="budget">
-                    <option value="" default disabled>Location</option>                        
-                </select>
-                <input id="findEvent" type="submit" value="Find events">
-            </form>
-            <div class="mask"></div>
-        </div>
-        <div id=content>
-            <ul>
-                <a href="#"><li>Most Popular</li></a>
-                <a href="#"><li>Coming up</li></a>
-                <a href="#"><li>Near you</li></a>
-            </ul>
-            <div id="events">
-                <div id="event1" class="eventBox">
-                    <div class="thumb"></div>
-                    <div class="contentBox">
-                        <h5>COUNTRY</h5>
-                        <h4>Kenny Chesney w/ Grace Potter</h4>
-                        <div class="local">
-                            <h5>LOCATION</h5>
-                            <span class="fieldData">Nashville, TN</span>
-                        </div>
-                        <div class="price">
-                            <h5>PRICE</h5>
-                            <span class="fieldData">$30-260</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="event2" class="eventBox">
-                    <img src="#">
-                    <h5>JAZZ</h5>
-                    <h4>GERALD ALBRIGHT BAND</h4>
-                    <div class="local">
-                        LOCATION
-                        Atlanta, GA
-                    </div>
-                    <div class="price">
-                        PRICE
-                        $15-90
-                    </div>
-                </div>
-                <div id="event3" class="eventBox">
-                    <img src="#">
-                    <h4>ELECTRONIC ROCK</h4>
-                    <h3>The Rock Church</h3>
-                    <div class="local">
-                        LOCATION
-                        Birmingham, AL
-                    </div>
-                    <div class="price">
-                        PRICE
-                        $20-40
-                    </div>
-                </div>
-                <button id="discover">Discover more</button>
-            </div>
-        </div>
+        <ng-view></ng-view>
         <footer>
-            <div id="footerLinks">
-                &copy; Aptaxle
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-            </div>
             <div id="social">
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
+                <a href="#"><img src="img/Facebook.png"></a>
+                <a href="#"><img src="img/Twitter.png"></a>
+                <a href="#"><img src="img/Google Plus.png"></a>
+            </div>
+            <div id="footerLinks">
+                <ul>
+                    <li>&copy; Aptaxle</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>                                        
+                </ul>
             </div>
         </footer>
     </body>
