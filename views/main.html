@@ -23,7 +23,9 @@
     </ul>
     <div id="events">
         <div id="event{{event.id}}" class="eventBox" ng-repeat="event in events">
-            <div class="thumb" ng-style="event.currentMedia"></div>
+            <div class="aspect">
+                <div class="thumb" ng-style="event.currentMedia"></div>
+            </div>
             <div class="contentBox">
                 <h5>{{event.type | uppercase }}</h5>
                 <h4>{{event.title}}</h4>

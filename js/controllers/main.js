@@ -26,6 +26,12 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
                     top: -11,
                     left: -18,
                 },
+                tabDesk:{
+                    width: 713,
+                    height: 436,
+                    top: -11,
+                    left: -18,
+                },
                 desktop:{
                     width: 427,
                     height: 261,
@@ -57,6 +63,12 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
                     height: 263,
                     top: 0,
                     left: 0,
+                },
+                tabDesk:{
+                    width: 713,
+                    height: 436,
+                    top: -11,
+                    left: -18,
                 },
                 desktop:{
                     width: 430,
@@ -90,6 +102,12 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
                     top: -19,
                     left: -60,
                 },
+                tabDesk:{
+                    width: 760,
+                    height: 345,
+                    top: -25,
+                    left: -11,
+                },
                 desktop:{
                     width: 408,
                     height: 281,
@@ -119,7 +137,9 @@ function setImage(){
         media = 'mobile';
     }else if(320 < screenWidth && screenWidth <= 768){
         media = 'tablet';
-    }else if(screenWidth > 768){
+    }else if(769 < screenWidth && screenWidth <= 1130){
+        media = 'tabDesk';
+    }else if(screenWidth > 1130){
         media = 'desktop';
     }
     for(var i=0;i<$scope.events.length;i ++){
