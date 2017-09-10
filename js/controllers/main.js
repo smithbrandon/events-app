@@ -1,11 +1,16 @@
 eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
 
+    $scope.filters = 0;
     $scope.events = [{
         id: 0,
         type:  "Country",
         title: "Kenny Chesney w/ Grace Potter",
         city: "Nashville",
         state: "TN",
+        currentMedia: {
+            'background-image': '',
+            'background-size':'',
+            'background-position':''},
         image: {
             file: 'chesney.png',
             media: {
@@ -25,7 +30,7 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
                     width: 427,
                     height: 261,
                     top: 0,
-                    left: -87,
+                    left: -84,
                 }
             },
         },
@@ -37,6 +42,7 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
         title: "Gerald Albright Band",
         city: "Atlanta",
         state: "GA",
+        currentMedia: {},
         image: {
             file: 'sax.png',        
             media: {
@@ -68,6 +74,7 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
         title: "The Rock Church",
         city: "Birmingham",
         state: "AL",
+        currentMedia: {},
         image: {
             file: 'keyboard.png',        
             media: {
@@ -95,14 +102,16 @@ eventManager.controller('mainCtrl',['$scope','$window',function($scope,$window){
         priceHigh: 40
     }];
 
+    setImage();
+
     var appWindow = angular.element($window);
     
       appWindow.bind('resize', function () {
-          console.log('Resized your browser ' + appWindow.innerWidth + 'px');
+          setImage();
+          $scope.$apply();
       });
 
-$scope.setImage = function(img){
-
+function setImage(){
     var media = '';
     var screenWidth = $window.innerWidth;
 
@@ -113,13 +122,11 @@ $scope.setImage = function(img){
     }else if(screenWidth > 768){
         media = 'desktop';
     }
-
-    return {
-        'background-image':'url(../img/' + img.file + ')',
-        'background-size': img.media[media].width + 'px '+ img.media[media].height + 'px',
-        'background-position':'left ' + img.media[media].left + 'px top ' + img.media[media].top + 'px'
+    for(var i=0;i<$scope.events.length;i ++){
+        $scope.events[i].currentMedia['background-image'] = 'url(../img/' + $scope.events[i].image.file + ')';
+        $scope.events[i].currentMedia['background-size'] = $scope.events[i].image.media[media].width + 'px '+ $scope.events[i].image.media[media].height + 'px',
+        $scope.events[i].currentMedia['background-position'] = 'left ' + $scope.events[i].image.media[media].left + 'px top ' + $scope.events[i].image.media[media].top + 'px'
     }
-
 }
 
 }]);

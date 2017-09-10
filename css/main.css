@@ -34,14 +34,17 @@ h5{
 body{
     font-family: "LatoRegular", sans-serif;
     overflow-x: none;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .hidden{
     display: none;
 }
 nav{
     position: absolute;
-    left: 21px;
-    width: 280px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
     top: 20px;
     z-index: 10;
 }
@@ -64,8 +67,6 @@ nav ul li{
     line-height: 40px;
 }
 
-
-
 ul li{
  list-style-type: none;
  position: relative;
@@ -81,19 +82,23 @@ ul li{
     height: 642px;
     background-position: left -430px top -203px;
 }
-#hero h1{
-    position: absolute;
+#heroText{
+    position: relative;
+    top: 132px;    
+}
+#heroText h1{
+    position: relative;
     text-align: center;
-    top: 132px;
     width: 100%;
     z-index: 2;
+    padding: 0 20px;
     line-height: 46px;
 }
-#hero h3{
-    position: absolute;
+#heroText h3{
+    position: relative;
     text-align: center;
-    top: 297px;
     width: 100%;
+    padding: 25px 20px;
     z-index: 2;
     line-height: 32px;
 }
@@ -111,11 +116,13 @@ ul li{
 }
 form{
     display: block;
-    position: absolute;
-    top: 401px;
-    left: 0;
-    right: 0;
-    width: 280px;
+    position: relative;
+    /* top: 401px; */
+    /* left: 0;
+    right: 0; */
+    margin-top: 50px;
+    max-width: 280px;
+    width: 100%;
     margin: auto;
     z-index: 2;
 }
@@ -149,6 +156,14 @@ form{
     color: rgba(155,157,160,1);
     font-family: 'LatoRegular';
 }
+select {
+    -moz-appearance: none;
+    -webkit-appearance:none;
+}
+select::-ms-expand {
+    display: none;
+}
+
 #budget{
     float: right;
 }
@@ -171,7 +186,7 @@ form{
     height: 50px;
     border-radius: 3px;
     z-index: 2;
-    margin: 0 auto;
+    margin: 12px auto;
     border: none;
     text-align: center;
     
@@ -185,11 +200,10 @@ form{
     font-size: 15px;
     padding-right: 20px;
     display: inline-block;
+    cursor: pointer;
 }
 .thumb{
     display: block;
-    /* background-position: left -63px top 0px;
-    background-size: 427px 261px;  */
     height: 261px;
 }
 
@@ -272,3 +286,18 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+.eventBox{
+    vertical-align: top;
+    max-width: 347px;
+    width: 100%;
+    margin: 0 auto;
+}
+ .active:after {
+    background: none repeat scroll 0 0 rgba(144,196,91,1);
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 35px;
+}
