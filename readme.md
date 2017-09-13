@@ -1,7 +1,6 @@
 ## Modifications To-Do List
 
 * add hover effects to buttons
-* Change images to jpg or SVG
 * add accessibility
 * Make SEO compatible
 * use aria to set main nav and footer
@@ -23,3 +22,4 @@
 * Fix anchor tags with lists √
 * Remove ul from footer √
 * Use Font classes √
+* Change images to jpg or SVG √

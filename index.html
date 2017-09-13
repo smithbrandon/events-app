@@ -18,192 +18,107 @@
         <title>Aptaxle Events</title>
         
         <!-- Styling -->
-        <linke rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/main.1.css">
     </head>
-    <body role="document">
-        <nav role="navigation">
-            <img src="/img/logo.svg" alt="Aptaxle Logo">                         Add mask to image after
-            <ul>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">Discover</a></li>
-                <li><a href="#">Add Event</a></li>
-                <li class="btn"><a href="#">Join us</a></li>
-            </ul>
-        </nav>
+    <body>
+        <header role="banner">
+            <a href="/"></a><img class="logo" src="/img/logo.svg" alt="Aptaxle Logo"></a>
+            <nav role="navigation" class="nav">
+                <a class="btn btn-default pos-right" href="#">Join us</a>
+                <ul>
+                    <li><a class="nav-link" href="#">Browse</a></li>
+                    <li><a class="nav-link" href="#"></a>Discover</a></li>
+                    <li><a class="nav-link" href="#">Add Event</a></li>
+                </ul>
+            </nav>
+        </header>
         
-        <section class="mod-hero" role="main">
-            <img src="/img/hero.jpg" scrset="" size="" alt="Concert Crowd">
-            <div class="hero-container">
-                <p class="hero-headline">Amazing performances near you</p>
-                <p class="hero-subtext">Discover the top live music events in the Southeast</p>
-                <form>
-                    <input id="search" type="text" placeholder="Enter your favorite artist or genre">
-                    <select id="people" class="customDrop">
+        <section class="hero" role="main">
+            <img class="hero-img" src="/img/hero-sm-vert-1x.jpg" scrset="/img/hero-sm-vert-1x.jpg 320w ,
+                    /img/hero-med-horz-1x 768w,
+                    /img/hero-lg-horz-1x 1280w" alt="Concert Crowd" role="presentation">
+            <div class="hero-content">
+                <p class="headline">Amazing performances near you</p>
+                <p class="subtext">Discover the top live music events in the Southeast</p>
+                <form class="hero-form" role="search">
+                    <input class="input input-primary" type="text" placeholder="Enter your favorite artist or genre">
+                    <select class="select primary-select" role="menu">
                         <option value="" default>Location</option>
                     </select>
-                    <select id="budget" class="customDrop">
-                        <option value="" default>Budget</option>                        
+                    <select class="select secondary-select" role="menu">
+                        <option value="" default>Budget</option>
                     </select>
-                    <input id="findEvent" type="submit" value="Find events">
+                    <input  class="btn btn-primary" type="submit" value="Find events">
                 </form>
             </div>
         </section>
 
-        <section>
+        <section class="content">
             <ul>
                 <li>Most Popular</li>
                 <li>Coming up</li>
                 <li>Near you</li>
             </ul>
-            <div id="events">
-                <div id="event{{event.id}}" class="eventBox" ng-repeat="event in events">
-                    <div class="aspect">
-                        <div class="thumb" ng-style="event.currentMedia"></div>
-                    </div>
-                    <div class="contentBox">
-                            <!-- mobile:{
-                                width: 427,
-                                height: 261,
-                                top: 0,
-                                left: -84,
-                            },
-                            tablet:{
-                                width: 713,
-                                height: 436,
-                                top: -11,
-                                left: -18,
-                            },
-                            tabDesk:{
-                                width: 713,
-                                height: 436,
-                                top: -11,
-                                left: -18,
-                            },
-                            desktop:{
-                                width: 427,
-                                height: 261,
-                                top: 0,
-                                left: -84,
-                            } -->
-                        
-                        
-                        
-                        <img src="/img/chesney.png" srcset="" size="">
-                        <h5>COUNTRY</h5>
-                        <h4>Kenny Chesney w/ Grace Potter</h4>
-                        
-                        <!-- Change to detail list -->
-                        <table>
-                            <tr>
-                                <td class="text-right">LOCATION</td>
-                                <td>PRICE</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">Nashville, TN</td>
-                                <td>$30-260</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="contentBox">
-                            <!-- media: {
-                                mobile:{
-                                    width: 430,
-                                    height: 263,
-                                    top: 0,
-                                    left: 0,
-                                },
-                                tablet:{
-                                    width: 430,
-                                    height: 263,
-                                    top: 0,
-                                    left: 0,
-                                },
-                                tabDesk:{
-                                    width: 713,
-                                    height: 436,
-                                    top: -11,
-                                    left: -18,
-                                },
-                                desktop:{
-                                    width: 430,
-                                    height: 263,
-                                    top: 0,
-                                    left: 0,
-                                } -->
-                        <img src="/img/chesney.png" srcset="" size="">                            
-                        <h5>JAZZ</h5>
-                        <h4>Gerald Albright Band</h4>
-                        <table>
-                            <tr>
-                                <td class="text-right">LOCATION</td>
-                                <td>PRICE</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">Altanta, GA</td>
-                                <td>$15-90</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="contentBox">
-                            <!-- media: {
-                                mobile:{
-                                    width: 408,
-                                    height: 281,
-                                    top: -21,
-                                    left: -60,
-                                },
-                                tablet:{
-                                    width: 408,
-                                    height: 281,
-                                    top: -19,
-                                    left: -60,
-                                },
-                                tabDesk:{
-                                    width: 760,
-                                    height: 345,
-                                    top: -25,
-                                    left: -11,
-                                },
-                                desktop:{
-                                    width: 408,
-                                    height: 281,
-                                    top: -19,
-                                    left: -60,
-                                }
-                            }
-                        }, -->
-                
-            <img src="/img/keyboard.png" srcset="" size="">                            
-                        <h5>ELECTRONIC ROCK</h5>
-                        <h4>The Rock Church</h4>
-                        <table>
-                            <tr>
-                                <td class="text-right">LOCATION</td>
-                                <td>PRICE</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">Birmingham, AL</td>
-                                <td>$20-40</td>
-                            </tr>
-                        </table>
-                    </div>
+            <div class="events">
+                <div class="event">
+                    <img class="event-img" src="/img/chesney.png" srcset="" size="">
+                    <dl class="event-title">
+                        <dt>COUNTRY</dt>
+                        <dd>Kenny Chesney w/ Grace Potter</dd>
+                    </dl>
+                    <dl class="event-desc">
+                        <dt>LOCATION</dt>
+                        <dt>PRICE</dt>
+                        <dd>Nashville, TN</dd>
+                        <dd>$30-260</dd>
+                    </dl>
+                </div>
+                <div class="event">
+                    <img class="event-img" src="/img/chesney.png" srcset="" size="">                            
+                    <dl class="event-title">
+                        <dt>JAZZ</dt>
+                        <dd>Gerald Albright Band</dd>
+                    </dl>
+                    <dl class="event-desc">
+                        <div class="local">
+                            <dt>LOCATION</dt>
+                            <dt>Altanta, GA</dt>
+                        </div>
+                        <div class="price">
+                            <dt>PRICE</dt>
+                            <dd>$15-90</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="contentBox">                
+                    <img class="event-img" src="/img/keyboard.png" srcset="" size="">               
+                    <dl class="event-title">
+                        <dt>ELECTRONIC ROCK</dt>
+                        <dd>The Rock Church</dd>
+                    </dl>
+                    <dl class="event-desc">
+                        <dt>LOCATION</dt>
+                        <dt>PRICE</dt>
+                        <dd>Birmingham, AL</dd>           
+                        <dd>$20-40</dd>
+                    </dl>
                 </div>
             </div>
-            <button id="discover">Discover more</button>
-        </div>
+            <button class="btn btn-inverse pos-center">Discover more</button>
+        </section>
         <footer role="contentinfo">
-            <div id="social">
-                <a href="#"><i class="bt-social fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="bt-social fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="bt-social fa fa-google-plus" aria-hidden="true"></i></a>
+            <div class="social">
+                <a href="#"><i class="btn-social fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="btn-social fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="btn-social fa fa-google-plus" aria-hidden="true"></i></a>
             </div>
-            <div id="footerLinks">
-                <p>&copy; Aptaxle</p>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>                                        
-                </ul>
+            <div class="footer-info">
+                &copy; Aptaxle
+                <div class="footer-links">
+                    <a class="footer-links-a" href="#">Privacy Policy</a>
+                    <a class="footer-links-a" href="#">Terms of Use</a>
+                </div>
             </div>
         </footer>
     </body>

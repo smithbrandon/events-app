@@ -1,0 +1,348 @@
+/* Styleing Table of Contents*/
+
+
+
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+
+    /* Begining of Custom CSS */
+    @font-face {
+        font-family: 'Lato';
+        font-weight: 300;
+        src: 
+            url('/fonts/Lato-Light.woff2') format('woff2'), 
+            url('/fonts/Lato-Light.woff') format('woff'),
+            url('/fonts/Lato-Light.ttf') format('truetype'),
+            url('/fonts/Lato-Light.eot') format('embedded-opentype');
+    }
+
+    @font-face{
+        font-family: 'Lato';
+        font-weight: 400;
+        src: 
+            url('/fonts/Lato-Regular.woff2') format('woff2'), 
+            url('/fonts/Lato-Regular.woff') format('woff'),
+            url('/fonts/Lato-Regular.ttf') format('truetype'),
+            url('/fonts/Lato-Regular.eot') format('embedded-opentype');
+    }
+    @font-face{
+        font-family: 'Lato';
+        font-weight: 700;
+        src: 
+            url('/fonts/Lato-Bold.woff2') format('woff2'), 
+            url('/fonts/Lato-Bold.woff') format('woff'),
+            url('/fonts/Lato-Bold.ttf') format('truetype'),
+            url('/fonts/Lato-Bold.eot') format('embedded-opentype');
+    }
+
+/* Base Class Formats */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,li{
+    color: #FFF;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 40px;
+    list-style-type: none;
+    position: relative;
+   }
+
+header{
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+footer{
+    border-top: 1px solid #B3B5BE; /* Add 40% opacity */
+    padding: 35px;
+}
+/* Module Class Formats */
+.nav{
+    float: right;
+    margin: 5px 10px;
+}
+li > a.nav-link{
+    display: none;
+    padding: 15px;
+}
+@media screen and (max-width: 767px){
+    li > a.nav-link:last-child{
+        display: inline-block;
+    }
+}
+
+.hero > .hero-img:before{   /*This isn't working yet*/
+    background: #5C4E48;
+    background-image: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0.00) 100%);
+    content:"";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+}
+
+.hero-content{
+    position: absolute;
+    text-align: center;
+    top: 132px;
+    width: 100%;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.headline{
+    padding: 0 20px;
+    line-height: 46px;
+    font-size: 42px;
+}
+
+.subtext{
+    padding: 0 20px;
+    line-height: 32px;
+    font-size: 22px;
+}
+
+.hero-form{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    max-width: 280px;
+    width: 100%;
+    margin: auto;
+}
+.content{
+    padding: 40px 20px;
+}
+
+.events{
+
+}
+.event{
+
+}
+.event-img{
+
+}
+.event-title > dt {
+    color: #4D4F56;
+    font-weight: 300;
+}   
+.event-title >dd {
+    color: #E3694C;
+    font-weight: 400;
+}
+.event-desc{
+    border-top: 1px solid #B3B5BE;  
+    /* padding: 15px 15px 0px 15px; */
+    font-size: 12px;
+    color: #B3B5BE;
+    /* width: 50%; */
+}
+.local{
+    border-right: 1px solid #B3B5BE;  /*This should have an 
+    opacity of .4*/
+    text-align: right;
+}
+.local,
+.price{
+    width: 48%;
+    display: inline-block
+}
+
+.event-desc dd{
+    font-size: 16px;
+    color: #4D4F56;
+}
+
+/* Component Class Formats */
+.btn{
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 3px;
+    color: #E3694C;
+    font-weight: 700;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn-default{
+    height: 40px;
+    width: 90px;
+}
+
+.btn-primary{
+    background-color: #90C45B;
+    border: none;
+    color: #FFF;
+    height: 50px;
+    width: 280px;
+}
+.btn-social{
+    height: 30px;
+    width: 30px;
+    margin: 15px 6.5px;
+    border-radius: 100%;
+    background-color: #A6A7AA;
+    text-align: center;
+    color: #FFF;
+    line-height: 30px;
+}
+
+.btn-inverse{
+    background-color: #FFF;
+    border: 1px solid #B3B5BE;
+    color: #90C45B;
+    font-size: 15px;
+    height: 50px;
+    width: 188px;
+}
+.input{
+    font-size: 15px;
+    color: #9B9DA0;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    text-indent: 20px;
+}
+.input-primary{
+    margin: 0 auto;
+}
+.select{
+    background-image: url('../img/arrow.svg');
+    background-position: right 20px center;
+    background-size: 12.05px 6.08px;
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    font-size: 15px;
+    color: #9B9DA0;
+    width: 136px;
+    margin: 12px 0;
+    height: 50px;
+    display: inline-block;
+    background-color: #FFF;
+    border: none;
+}
+.select{
+    -moz-appearance: none;
+    -webkit-appearance:none;
+}
+.select::-ms-expand{
+    display: none;
+}
+
+.primary-select{
+    float: left;
+}
+
+.secondary-select{
+    float: right;
+}
+
+/* State Class Formats */
+.is-active:after {
+    background: none repeat scroll 0 0 rgba(144,196,91,1);
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 35px;
+}
+
+.pos-right{
+    float: right;
+}
+.pos-center{
+    display: block;
+    margin: 0 auto;
+}
+.social{
+    text-align: center;
+}
+
+.footer-info{
+    font-weight: 300;
+    font-size: 13px;
+    color: #B3B5BE;
+}
+.footer-links{
+    display: inline-block;
+    margin-left: 25px;
+}
+.footer-links-a{
+    text-decoration: underline;
+    padding: 0 3px;
+}
