@@ -1,14 +1,87 @@
+/* Styleing Table of Contents*/
+
+
+
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Begining of Custom CSS */
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: 
+        url('/fonts/Lato-Light.woff2') format('woff2'), 
+        url('/fonts/Lato-Light.woff') format('woff'),
+        url('/fonts/Lato-Light.ttf') format('truetype'),
+        url('/fonts/Lato-Light.eot') format('embedded-opentype');
+}
+
 @font-face{
-    font-family: LatoBold;
-    src: url(fonts/Lato-Bold.ttf);
+    font-family: 'Lato';
+    font-weight: 400;
+    src: 
+        url('/fonts/Lato-Regular.woff2') format('woff2'), 
+        url('/fonts/Lato-Regular.woff') format('woff'),
+        url('/fonts/Lato-Regular.ttf') format('truetype'),
+        url('/fonts/Lato-Regular.eot') format('embedded-opentype');
 }
 @font-face{
-    font-family: LatoRegular;
-    src: url(fonts/Lato-Regular.ttf);
-}
-@font-face{
-    font-family: LatoLight;
-    src: url(fonts/Lato-Light.ttf);
+    font-family: 'Lato';
+    font-weight: 700;
+    src: 
+        url('/fonts/Lato-Bold.woff2') format('woff2'), 
+        url('/fonts/Lato-Bold.woff') format('woff'),
+        url('/fonts/Lato-Bold.ttf') format('truetype'),
+        url('/fonts/Lato-Bold.eot') format('embedded-opentype');
 }
 
 h1{
@@ -146,7 +219,7 @@ form{
     float: left;
 }
 .customDrop{
-    background-image: url('../img/Arrow.png');
+    background-image: url('../img/arrow.svg');
     background-position: right 20px center;
     background-size:
         12.05px 6.08px;
@@ -301,3 +374,250 @@ html {
     position: relative;
     width: 35px;
 }
+
+/* iphone 5 Media Query */
+/* -- main css */
+
+/* Intermediate Media Query */
+
+/* tablet Media Query */
+
+@media screen and (max-width: 768px) and (min-width: 501px) {
+    nav{
+        padding: 0 40px;
+        width: 100%;
+    }
+    #heroText{
+        top: 160px;
+    }
+    #heroText h1{
+        padding: 0 40px;
+    }
+    #hero h3{
+        font-size: 22px;
+        padding: 15px 40px 50px;
+    }
+    form{
+        max-width: 580px;
+        width: 90%;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    .hidden{
+        display: inline-block;
+    }
+    #hero{
+        height: 550px;   
+        background-position: left -280px top -295px
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+    .eventBox{
+        margin: none;
+        max-width: none;
+    }
+    .eventBox:not(:first-child){
+        display: inline-block;
+        max-width:325px;
+        width: 48%;
+    }
+
+    .eventBox:first-child .thumb{
+        max-width: 688px;
+        width: 100%;
+        height: 320px;
+    }
+    .thumb{
+        height: auto;
+    }
+    .eventBox:not(:first-child):nth-child(even){
+        float: left;
+    }
+    .eventBox:not(:first-child):nth-child(even){
+        float: right;
+    }
+    .eventBox:not(:first-child) .aspect{
+        position: relative;
+        padding-bottom: 82%;
+    }
+    .eventBox:not(:first-child) .thumb{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: none;
+    }
+
+    #budget{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    h4{
+        font-size: 20px;
+    }
+
+    #events{
+        padding: 30px 40px;
+    }
+    #content ul{
+        margin-left: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 1130px) and (min-width: 769px) {
+    nav{
+        padding: 0 40px;
+        width: 100%;
+    }
+    #heroText{
+        top: 160px;
+    }
+    #heroText h1{
+        padding: 0 40px;
+    }
+    #hero h3{
+        font-size: 22px;
+        padding: 15px 40px 50px;
+    }
+    form{
+        max-width: 580px;
+        width: 90%;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    .hidden{
+        display: inline-block;
+    }
+    #hero{
+        height: 550px;   
+        background-position: left -280px top -295px
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+    .eventBox{
+        margin: none;
+        max-width: none;
+        display: block;
+        max-width:688px;
+        margin: 0 auto;
+    }
+
+    .eventBox .thumb{
+        max-width: 688px;
+        width: 100%;
+        height: 320px;
+    }
+    #budget{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    h4{
+        font-size: 20px;
+    }
+
+    #events{
+        padding: 30px 40px;
+    }
+    #content ul{
+        margin-left: 40px;
+    }
+
+}
+
+
+/* desktop Media Query */
+@media screen and (min-width: 1131px) {
+    nav{
+        padding: 0 40px;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #heroText{
+        top: 205px;
+    }
+    #heroText h1{
+        font-size: 64px;
+        padding: 0 40px;
+    }
+    #heroText h3{
+        font-size: 32px;
+        padding: 25px 40px 65px;
+    }
+    #hero{
+        height: 660px;   
+        background-position: top -185px left 0px;   
+    }
+    .hidden{
+        display: inline-block;
+    }
+    form{
+        max-width: 580px;
+        width: 100%;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .eventBox{
+        display: inline-block;
+        width:32%;
+    }
+    .eventBox:nth-child(3n + 2){
+        margin: 0 2%;
+    }
+    #budget{
+        margin-right: 1.25%;
+        margin-left: 1.25%;
+    }
+    h4{
+        font-size: 20px;
+    }
+    #events{
+        padding: 30px 84px;
+    }
+    #content ul{
+        margin-left: 84px;
+    }
+    .contentBox h4{
+        padding: 5px 0 17px 0;
+    }
+    table tr:last-child td{
+        font-size: 18px;
+    }    
+    .thumb{
+        max-width: 343px;
+    }
+}
+
