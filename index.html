@@ -35,9 +35,19 @@
         </header>
         
         <section class="hero" role="main">
-            <img class="hero-img" src="/img/hero-sm-vert-1x.jpg" scrset="/img/hero-sm-vert-1x.jpg 320w ,
-                    /img/hero-med-horz-1x 768w,
-                    /img/hero-lg-horz-1x 1280w" alt="Concert Crowd" role="presentation">
+            <!-- <picture class="hero-img" alt="Concert Crowd" role="presentation">
+                <source srcset="/img/hero-lg-horz-1x.jpg 1x,/img/hero-lg-horz-2x.jpg 2x,/img/hero-lg-horz-3x.jpg 3x" media="(min-width: 1280px)"/>    
+                <source srcset="/img/hero-md-horz-1x.jpg 1x,/img/hero-md-horz-2x.jpg 2x,/img/hero-md-horz-3x.jpg 3x" media="(min-width: 768px)" />
+                <source srcset="/img/hero-sm-vert-1x.jpg 1x, /img/hero-sm-vert-2x.jpg 2x, /img/hero-sm-vert-3x.jpg 3x" media="(min-width: 320px)" />
+                <img src="/img/hero-sm-vert-1x.jpg" />
+            </picture> -->
+            <img    src="/img/hero-lg-horz-3x.jpg" 
+                    srcset="/img/hero-sm-vert-3x.jpg 960w,
+                            /img/hero-md-horz-3x.jpg 2304w,
+                            /img/hero-lg-horz-3x.jpg 3840w"
+                    sizes=" (min-width: 1280px 100vw,
+                            (min-width: 768px ,
+                            (min-width: 320px "/>
             <div class="hero-content">
                 <p class="headline">Amazing performances near you</p>
                 <p class="subtext">Discover the top live music events in the Southeast</p>
