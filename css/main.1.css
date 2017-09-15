@@ -123,34 +123,38 @@ footer{
     border-top: 1px solid #B3B5BE; /* Add 40% opacity */
     padding: 35px;
 }
+
 /* Module Class Formats */
 .nav{
     float: right;
-    margin: 5px 10px;
+    margin: 5px 0;
 }
-li > a.nav-link{
-    display: none;
-    padding: 15px;
+
+/* @media screen and (min-width: px) {
+    nav{
+        padding: 0 40px;
+        width: 100%;
+    } */
+
+.nav li {
+    padding: 0 15px;
 }
+a.nav-link{
+    padding: 5px 0;
+}
+a.nav-link:hover{
+    border-bottom: solid 3px #90C45B;
+}
+
 @media screen and (max-width: 767px){
-    li > a.nav-link:last-child{
-        display: inline-block;
+    li:not(:last-child) > a.nav-link{
+        display: none;
     }
 }
+
 .hero-img{
     width: 100%;
-    height: 100vw;
-}
-.hero > .hero-img:before{   /*This isn't working yet*/
-    background: #5C4E48;
-    background-image: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0.00) 100%);
-    content:"";
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0.05;
-    position: absolute;
-    top: 0;
+    height: auto;
 }
 
 .hero-content{
@@ -158,32 +162,79 @@ li > a.nav-link{
     text-align: center;
     top: 132px;
     width: 100%;
+    padding: 0 20px;
     font-weight: 300;
     color: #FFF;
 }
 
+@media screen and (max-width: 768px) and (min-width: 501px) {
+    .hero-content{
+        top: 160px;
+        padding: 0 40px;
+    }
+}
+
 .headline{
-    padding: 0 20px;
     line-height: 46px;
     font-size: 42px;
+    margin-bottom: 27px;
+}
+@media screen and (max-width: 768px) and (min-width: 501px) {
+    .headline{
+        font-size: 46px;
+        margin-bottom:15px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .headline{
+        font-size: 66px;
+        margin-bottom:46px;
+    }
 }
 
 .subtext{
-    padding: 0 20px;
     line-height: 32px;
     font-size: 22px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 501px) {
+    .subtext{
+        padding-bottom:47px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .subtext{
+        padding-bottom:47px;
+        font-size: 32px;
+    }
 }
 
 .hero-form{
     display: block;
     position: relative;
     margin-top: 50px;
-    max-width: 280px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
+@media screen and (min-width: 501px) {
+ .hero-form{
+     max-width: 581px;
+ }   
+}
+
 .content{
     padding: 40px 20px;
+}
+
+
+.feature{
+    color: #4D4F56;
+    padding: 0 8px;
+    font-size: 15px;
+}
+ul > .feature{
+    margin-bottom: 40px;
 }
 
 .events{
@@ -193,33 +244,52 @@ li > a.nav-link{
 
 }
 .event-img{
-
+    height: 260px;
+    width: 280px;
+}
+.event-title{
+    margin-top: 18px;
 }
 .event-title > dt {
-    color: #4D4F56;
+    color: #B3B5BE;
     font-weight: 300;
+    font-size: 12px;
+    padding: 5px 0;
 }   
 .event-title >dd {
     color: #E3694C;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 17px;
 }
 .event-desc{
-    border-top: 1px solid #B3B5BE;  
+    margin-bottom: 40px;
+}
+.event-desc dt,
+.event-desc dd{
+    display: inline-block;
     /* padding: 15px 15px 0px 15px; */
     font-size: 12px;
     color: #B3B5BE;
-    /* width: 50%; */
+    width: 49%;
 }
+
 .local{
     border-right: 1px solid #B3B5BE;  /*This should have an 
     opacity of .4*/
     text-align: right;
 }
+.price{
+    margin-left: -1px;
+}
 .local,
 .price{
-    width: 48%;
+    border-top: 1px solid #B3B5BE;
+    width: 49%;
     display: inline-block
 }
+
 
 .event-desc dd{
     font-size: 16px;
@@ -250,7 +320,18 @@ li > a.nav-link{
     color: #FFF;
     height: 50px;
     width: 280px;
+    cursor: pointer;
 }
+
+@media screen and (min-width: 501px) {
+    .btn-primary{
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+        margin: 12px 0;
+    }   
+}
+
 .btn-social{
     height: 30px;
     width: 30px;
@@ -270,6 +351,7 @@ li > a.nav-link{
     height: 50px;
     width: 188px;
 }
+
 .input{
     font-size: 15px;
     color: #9B9DA0;
@@ -280,9 +362,11 @@ li > a.nav-link{
     width: 100%;
     text-indent: 20px;
 }
+
 .input-primary{
     margin: 0 auto;
 }
+
 .select{
     background-image: url('../img/arrow.svg');
     background-position: right 20px center;
@@ -291,12 +375,19 @@ li > a.nav-link{
     text-indent: 20px;
     font-size: 15px;
     color: #9B9DA0;
-    width: 136px;
+    width: 48%;
     margin: 12px 0;
     height: 50px;
     display: inline-block;
     background-color: #FFF;
     border: none;
+    cursor: pointer;
+}
+.select:hover{
+    color: #90C45B;
+}
+.primary-select{
+    margin-right: 2.46%;
 }
 .select{
     -moz-appearance: none;
@@ -305,18 +396,26 @@ li > a.nav-link{
 .select::-ms-expand{
     display: none;
 }
-
-.primary-select{
+@media screen and (min-width: 501px) {
+    .select{
+        width: 32%;
+    }
+    .primary-select,
+    .secondary-select{
+        margin-right: 1.2%;
+    }
+}
+/* .primary-select{
     float: left;
 }
 
 .secondary-select{
     float: right;
-}
+} */
 
 /* State Class Formats */
-.is-active:after {
-    background: none repeat scroll 0 0 rgba(144,196,91,1);
+.is-active:after{
+    background: none repeat scroll 0 0 #90C45B;
     bottom: 10px;
     content: "";
     display: block;
@@ -335,15 +434,18 @@ li > a.nav-link{
 .social{
     text-align: center;
 }
-
+.btn-bottom{
+    margin-top: 50px;
+}
 .footer-info{
     font-weight: 300;
     font-size: 13px;
     color: #B3B5BE;
+    margin-bottom: 50px;
 }
 .footer-links{
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 15px;
 }
 .footer-links-a{
     text-decoration: underline;

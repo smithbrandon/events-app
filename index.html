@@ -23,12 +23,12 @@
     </head>
     <body>
         <header role="banner">
-            <a href="/"></a><img class="logo" src="/img/logo.svg" alt="Aptaxle Logo"></a>
+            <a href="/"><img class="logo" src="/img/logo.svg" alt="Aptaxle Logo"></a>
             <nav role="navigation" class="nav">
                 <a class="btn btn-default pos-right" href="#">Join us</a>
                 <ul>
                     <li><a class="nav-link" href="#">Browse</a></li>
-                    <li><a class="nav-link" href="#"></a>Discover</a></li>
+                    <li><a class="nav-link" href="#">Discover</a></li>
                     <li><a class="nav-link" href="#">Add Event</a></li>
                 </ul>
             </nav>
@@ -41,13 +41,17 @@
                 <source srcset="/img/hero-sm-vert-1x.jpg 1x, /img/hero-sm-vert-2x.jpg 2x, /img/hero-sm-vert-3x.jpg 3x" media="(min-width: 320px)" />
                 <img src="/img/hero-sm-vert-1x.jpg" />
             </picture> -->
-            <img    src="/img/hero-lg-horz-3x.jpg" 
-                    srcset="/img/hero-sm-vert-3x.jpg 960w,
-                            /img/hero-md-horz-3x.jpg 2304w,
-                            /img/hero-lg-horz-3x.jpg 3840w"
+            <!-- <img    src="/img/hero-sm@3x.jpg" 
+                    media=" (min-width: 320px),
+                            (min-width: 768px),
+                            (min-width: 1280px)"
+                    srcset="/img/hero-sm@3x.jpg 960w,
+                            /img/hero-md@3x.jpg 2304w,
+                            /img/hero-lg@3x.jpg 3840w"
                     sizes=" (min-width: 1280px 100vw,
-                            (min-width: 768px ,
-                            (min-width: 320px "/>
+                            (min-width: 768px,
+                            (min-width: 320px"/> -->
+            <img src="/img/hero-lg@3x.jpg" class="hero-img">
             <div class="hero-content">
                 <p class="headline">Amazing performances near you</p>
                 <p class="subtext">Discover the top live music events in the Southeast</p>
@@ -66,13 +70,21 @@
 
         <section class="content">
             <ul>
-                <li>Most Popular</li>
-                <li>Coming up</li>
-                <li>Near you</li>
+                <li class="feature is-active">Most Popular</li>
+                <li class="feature">Coming up</li>
+                <li class="feature">Near you</li>
             </ul>
             <div class="events">
                 <div class="event">
-                    <img class="event-img" src="/img/chesney.png" srcset="" size="">
+                    <img    src="/img/chesney-lg@3x.jpg" 
+                    srcset="/img/chesney-sm@3x.jpg 960w,
+                            /img/chesney-md@3x.jpg 2304w,
+                            /img/chesney-lg@3x.jpg 3840w"
+                    sizes=" (min-width: 1280px 260px,
+                            (min-width: 768px 260px,
+                            (min-width: 320px 280px,
+                            100vw"
+                    class="event-img"/>
                     <dl class="event-title">
                         <dt>COUNTRY</dt>
                         <dd>Kenny Chesney w/ Grace Potter</dd>
@@ -85,7 +97,15 @@
                     </dl>
                 </div>
                 <div class="event">
-                    <img class="event-img" src="/img/chesney.png" srcset="" size="">                            
+                    <img    src="/img/sax-lg@3x.jpg" 
+                    srcset="/img/sax-sm@3x.jpg 960w,
+                            /img/sax-md@3x.jpg 2304w,
+                            /img/sax-lg@3x.jpg 3840w"
+                    sizes=" (min-width: 1280px 100vw,
+                            (min-width: 768px,
+                            (min-width: 320px,
+                            100vw"
+                            class="event-img"/>                            
                     <dl class="event-title">
                         <dt>JAZZ</dt>
                         <dd>Gerald Albright Band</dd>
@@ -101,8 +121,16 @@
                         </div>
                     </dl>
                 </div>
-                <div class="contentBox">                
-                    <img class="event-img" src="/img/keyboard.png" srcset="" size="">               
+                <div class="contentBox">
+                    <img    src="/img/keyboard-lg@3x.jpg" 
+                    srcset="/img/keyboard-sm@3x.jpg 960w,
+                            /img/keyboard-md@3x.jpg 2304w,
+                            /img/keyboard-lg@3x.jpg 3840w"
+                    sizes=" (min-width: 1280px 100vw,
+                            (min-width: 768px ,
+                            (min-width: 320px,
+                            100vw"
+                            class="event-img"/>                            
                     <dl class="event-title">
                         <dt>ELECTRONIC ROCK</dt>
                         <dd>The Rock Church</dd>
@@ -115,7 +143,9 @@
                     </dl>
                 </div>
             </div>
-            <button class="btn btn-inverse pos-center">Discover more</button>
+            <div class="btn-bottom">
+                <button class="btn btn-inverse pos-center">Discover more</button>
+            </div>
         </section>
         <footer role="contentinfo">
             <div class="social">
