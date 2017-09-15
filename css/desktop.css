@@ -1,0 +1,108 @@
+@media screen and (min-width: 769px){
+    
+    .hero-form{
+        max-width: 580px;
+        width: 90%;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    .hidden{
+        display: inline-block;
+    }
+    #hero{
+        height: 550px;   
+        background-position: left -280px top -295px
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+    .eventBox{
+        margin: none;
+        max-width: none;
+        display: block;
+        max-width:688px;
+        margin: 0 auto;
+    }
+
+    .eventBox .thumb{
+        max-width: 688px;
+        width: 100%;
+        height: 320px;
+    }
+    #budget{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    h4{
+        font-size: 20px;
+    }
+
+    #events{
+        padding: 30px 40px;
+    }
+    #content ul{
+        margin-left: 40px;
+    }
+
+}
+
+
+/* desktop Media Query */
+@media screen and (min-width: 1131px) {
+    .hero-form{
+        max-width: 580px;
+        width: 100%;
+    }
+    #people, #budget, #findEvent{
+        width: 32%;
+        float: none;
+        display: inline-block;
+    }
+    #social{
+        display: inline-block;
+        float: right;
+    }
+    #footerLinks{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .eventBox{
+        display: inline-block;
+        width:32%;
+    }
+    .eventBox:nth-child(3n + 2){
+        margin: 0 2%;
+    }
+    #budget{
+        margin-right: 1.25%;
+        margin-left: 1.25%;
+    }
+    h4{
+        font-size: 20px;
+    }
+    #events{
+        padding: 30px 84px;
+    }
+    #content ul{
+        margin-left: 84px;
+    }
+    .contentBox h4{
+        padding: 5px 0 17px 0;
+    }
+    table tr:last-child td{
+        font-size: 18px;
+    }    
+    .thumb{
+        max-width: 343px;
+    }
+}
+

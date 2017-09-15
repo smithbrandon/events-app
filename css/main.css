@@ -1,239 +1,379 @@
-@media screen and (max-width: 768px) and (min-width: 501px) {
-    nav{
-        padding: 0 40px;
-        width: 100%;
-    }
-    #heroText{
-        top: 160px;
-    }
-    #heroText h1{
-        padding: 0 40px;
-    }
-    #hero h3{
-        font-size: 22px;
-        padding: 15px 40px 50px;
-    }
-    form{
-        max-width: 580px;
-        width: 90%;
-    }
-    #people, #budget, #findEvent{
-        width: 32%;
-        float: none;
-        display: inline-block;
-    }
-    .hidden{
-        display: inline-block;
-    }
-    #hero{
-        height: 550px;   
-        background-position: left -280px top -295px
-    }
-    #social{
-        display: inline-block;
-        float: right;
-    }
-    #footerLinks{
-        display: inline-block;
-        text-align: left;
-    }
-    .eventBox{
-        margin: none;
-        max-width: none;
-    }
-    .eventBox:not(:first-child){
-        display: inline-block;
-        max-width:325px;
-        width: 48%;
-    }
-
-    .eventBox:first-child .thumb{
-        max-width: 688px;
-        width: 100%;
-        height: 320px;
-    }
-    .thumb{
-        height: auto;
-    }
-    .eventBox:not(:first-child):nth-child(even){
-        float: left;
-    }
-    .eventBox:not(:first-child):nth-child(even){
-        float: right;
-    }
-    .eventBox:not(:first-child) .aspect{
-        position: relative;
-        padding-bottom: 82%;
-    }
-    .eventBox:not(:first-child) .thumb{
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: none;
-    }
-
-    #budget{
-        margin-right: 1%;
-        margin-left: 1%;
-    }
-    h4{
-        font-size: 20px;
-    }
-
-    #events{
-        padding: 30px 40px;
-    }
-    #content ul{
-        margin-left: 40px;
-    }
-
-}
+/* Styleing Table of Contents*/
 
 
-@media screen and (max-width: 1130px) and (min-width: 769px) {
-    nav{
-        padding: 0 40px;
-        width: 100%;
+
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
     }
-    #heroText{
-        top: 160px;
-    }
-    #heroText h1{
-        padding: 0 40px;
-    }
-    #hero h3{
-        font-size: 22px;
-        padding: 15px 40px 50px;
-    }
-    form{
-        max-width: 580px;
-        width: 90%;
-    }
-    #people, #budget, #findEvent{
-        width: 32%;
-        float: none;
-        display: inline-block;
-    }
-    .hidden{
-        display: inline-block;
-    }
-    #hero{
-        height: 550px;   
-        background-position: left -280px top -295px
-    }
-    #social{
-        display: inline-block;
-        float: right;
-    }
-    #footerLinks{
-        display: inline-block;
-        text-align: left;
-    }
-    .eventBox{
-        margin: none;
-        max-width: none;
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
         display: block;
-        max-width:688px;
-        margin: 0 auto;
+    }
+    html{
+        font-size: 16px;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
     }
 
-    .eventBox .thumb{
-        max-width: 688px;
-        width: 100%;
-        height: 320px;
-    }
-    #budget{
-        margin-right: 1%;
-        margin-left: 1%;
-    }
-    h4{
-        font-size: 20px;
+
+    /* Begining of Custom CSS */
+    @font-face {
+        font-family: 'Lato';
+        font-weight: 300;
+        src: 
+            url('/css/fonts/Lato-Light.woff2') format('woff2'), 
+            url('/css/fonts/Lato-Light.woff') format('woff'),
+            url('/css/fonts/Lato-Light.ttf') format('truetype'),
+            url('/css/fonts/Lato-Light.eot') format('embedded-opentype');
     }
 
-    #events{
-        padding: 30px 40px;
+    @font-face{
+        font-family: 'Lato';
+        font-weight: 400;
+        src: 
+            url('/css/fonts/Lato-Regular.woff2') format('woff2'), 
+            url('/css/fonts/Lato-Regular.woff') format('woff'),
+            url('/css/fonts/Lato-Regular.ttf') format('truetype'),
+            url('/css/fonts/Lato-Regular.eot') format('embedded-opentype');
     }
-    #content ul{
-        margin-left: 40px;
+    @font-face{
+        font-family: 'Lato';
+        font-weight: 700;
+        src: 
+            url('/css/fonts/Lato-Bold.woff2') format('woff2'), 
+            url('/css/fonts/Lato-Bold.woff') format('woff'),
+            url('/css/fonts/Lato-Bold.ttf') format('truetype'),
+            url('/css/fonts/Lato-Bold.eot') format('embedded-opentype');
     }
 
+/* Base Class Formats */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,li{
+    color: #FFF;
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+    list-style-type: none;
+    position: relative;
+   }
+
+header{
+    left: 0;
+    padding: 1.25rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+footer{
+    border-top: 1px solid #E1E2E5;
+    padding: 2.1875rem;
+}
+
+/* Module Class Formats */
+.nav{
+    float: right;
+    margin: 0.3125rem 0;
 }
 
 
-/* desktop Media Query */
-@media screen and (min-width: 1131px) {
-    nav{
-        padding: 0 40px;
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-    }
-    #heroText{
-        top: 205px;
-    }
-    #heroText h1{
-        font-size: 64px;
-        padding: 0 40px;
-    }
-    #heroText h3{
-        font-size: 32px;
-        padding: 25px 40px 65px;
-    }
-    #hero{
-        height: 660px;   
-        background-position: top -185px left 0px;   
-    }
-    .hidden{
-        display: inline-block;
-    }
-    form{
-        max-width: 580px;
-        width: 100%;
-    }
-    #people, #budget, #findEvent{
-        width: 32%;
-        float: none;
-        display: inline-block;
-    }
-    #social{
-        display: inline-block;
-        float: right;
-    }
-    #footerLinks{
-        display: inline-block;
-        text-align: left;
-    }
-
-    .eventBox{
-        display: inline-block;
-        width:32%;
-    }
-    .eventBox:nth-child(3n + 2){
-        margin: 0 2%;
-    }
-    #budget{
-        margin-right: 1.25%;
-        margin-left: 1.25%;
-    }
-    h4{
-        font-size: 20px;
-    }
-    #events{
-        padding: 30px 84px;
-    }
-    #content ul{
-        margin-left: 84px;
-    }
-    .contentBox h4{
-        padding: 5px 0 17px 0;
-    }
-    table tr:last-child td{
-        font-size: 18px;
-    }    
-    .thumb{
-        max-width: 343px;
-    }
+a.nav-link{                                         /* The underline is too long */
+    padding: 0.3125rem 0.9375rem;
+}
+a.nav-link:hover{
+    border-bottom: solid 3px #90C45B;
+}
+li:not(:last-child) > a.nav-link{
+    display: none;
 }
 
+.hero{
+    width: 100vw;
+    height: 40.625rem;
+    background-position: center;
+    background-image: url(/img/hero@3x.jpg);
+    background-size: cover;
+
+}
+
+.hero-content{
+    position: absolute;
+    text-align: center;
+    top: 8.25rem;
+    width: 100%;
+    padding: 0 1.25rem;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.headline{
+    line-height: 2.875rem;
+    font-size: 2.625rem;
+    margin-bottom: 1.69rem;
+}
+
+.subtext{
+    line-height: 2rem;
+    font-size: 1.375rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-form{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content{
+    padding: 2.5rem 1.25rem;
+}
+
+
+.feature{
+    color: #4D4F56;
+    padding: 0 0.5rem;
+    font-size: 0.9375rem;
+}
+ul > .feature{
+    margin-bottom: 2.5rem;
+}
+.events{
+    margin-bottom: 3.125rem;
+}
+.event{
+    margin-bottom: 2.5rem;
+}
+.event-img{
+    height: 16.25rem;
+    width: 17.5rem;
+    margin-bottom: 18px;
+}
+
+.event-type{
+    color: #B3B5BE;
+    font-weight: 300;
+    font-size: 0.75rem;
+    padding: 0.3125rem 0;
+}   
+
+.event-title {
+    color: #E3694C;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin-bottom: 1.0625rem;
+}
+
+.event-local{
+    text-align: right;
+    border-right: 1px solid #E1E2E5;
+}
+.event-local,
+.event-price{
+    padding: 0 .9375rem;
+    font-size: 0.75rem;
+    color: #B3B5BE;
+    width: 50%;
+    float: left;
+    line-height: 2rem;
+    font-weight: 300;
+    border-top: 1px solid #E1E2E5;
+}
+
+.event-local dd,
+.event-price dd{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #4D4F56;
+    padding-bottom: 0.3125rem;
+}
+
+
+/* Component Class Formats */
+.btn{
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 0.1875rem;
+    color: #E3694C;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    position: relative;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.btn-default{
+    height: 2.5rem;
+    width: 5.625rem;
+}
+
+.btn-primary{
+    background-color: #90C45B;
+    border: none;
+    color: #FFF;
+    height: 3.12rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-social{
+    height: 1.875rem;
+    width: 1.875rem;
+    margin: 0.9375rem 0.41rem;
+    border-radius: 100%;
+    background-color: #A6A7AA;
+    text-align: center;
+    color: #FFF;
+    line-height: 1.875rem;
+}
+
+.btn-inverse{
+    background-color: #FFF;
+    border: 1px solid #B3B5BE;
+    color: #90C45B;
+    font-size: 0.9375rem;
+    height: 3.125rem;
+    width: 11.75rem;
+}
+
+.input{
+    font-size: 0.9375rem;
+    color: #9B9DA0;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    border-radius: 0.1875rem;
+    border: none;
+    width: 100%;
+    text-indent: 1.25rem;
+}
+
+.input-primary{
+    margin: 0 auto;
+}
+
+.select{
+    background-image: url('../img/arrow.svg');
+    background-position: right 1.25rem center;
+    background-size: 0.75rem 0.375rem;
+    background-repeat: no-repeat;
+    text-indent: 1.25rem;
+    font-size: 0.9375rem;
+    color: #9B9DA0;
+    width: 48%;                             /*fix this*/
+    margin: 0.75rem 0;
+    height: 3.125rem;
+    float: left;
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+.select:hover{
+    color: #90C45B;
+}
+.primary-select{
+    margin-right: 4%;                    /*Fix This*/
+}
+.select{
+    -moz-appearance: none;
+    -webkit-appearance:none;
+}
+.select::-ms-expand{
+    display: none;
+}
+.clearfix{
+    clear: both;
+}
+
+/* State Class Formats */
+.is-active:after{
+    background: none repeat scroll 0 0 #90C45B;
+    bottom: 0.625rem;
+    content: "";
+    display: block;
+    height: 0.1875rem;
+    position: relative;
+    width: 2.1875rem;
+}
+
+.pos-right{
+    float: right;
+}
+.pos-center{
+    display: block;
+    margin: 0 auto;
+}
+.social{
+    text-align: center;
+}
+.footer-info{
+    font-weight: 300;
+    font-size: 0.8125rem;
+    color: #B3B5BE;
+    margin-bottom: 3.125rem;
+}
+.footer-links{
+    display: inline-block;
+    margin-left: 0.9375rem;
+}
+.footer-links-a{
+    text-decoration: underline;
+    padding: 0 0.3125rem;
+}

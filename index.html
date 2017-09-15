@@ -19,7 +19,9 @@
         
         <!-- Styling -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/main.1.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/tablet.css">
+        <link rel="stylesheet" href="/css/desktop.css">
     </head>
     <body>
         <header role="banner">
@@ -33,28 +35,10 @@
                 </ul>
             </nav>
         </header>
-        
         <section class="hero" role="main">
-            <!-- <picture class="hero-img" alt="Concert Crowd" role="presentation">
-                <source srcset="/img/hero-lg-horz-1x.jpg 1x,/img/hero-lg-horz-2x.jpg 2x,/img/hero-lg-horz-3x.jpg 3x" media="(min-width: 1280px)"/>    
-                <source srcset="/img/hero-md-horz-1x.jpg 1x,/img/hero-md-horz-2x.jpg 2x,/img/hero-md-horz-3x.jpg 3x" media="(min-width: 768px)" />
-                <source srcset="/img/hero-sm-vert-1x.jpg 1x, /img/hero-sm-vert-2x.jpg 2x, /img/hero-sm-vert-3x.jpg 3x" media="(min-width: 320px)" />
-                <img src="/img/hero-sm-vert-1x.jpg" />
-            </picture> -->
-            <!-- <img    src="/img/hero-sm@3x.jpg" 
-                    media=" (min-width: 320px),
-                            (min-width: 768px),
-                            (min-width: 1280px)"
-                    srcset="/img/hero-sm@3x.jpg 960w,
-                            /img/hero-md@3x.jpg 2304w,
-                            /img/hero-lg@3x.jpg 3840w"
-                    sizes=" (min-width: 1280px 100vw,
-                            (min-width: 768px,
-                            (min-width: 320px"/> -->
-            <img src="/img/hero-lg@3x.jpg" class="hero-img">
             <div class="hero-content">
-                <p class="headline">Amazing performances near you</p>
-                <p class="subtext">Discover the top live music events in the Southeast</p>
+                <h1 class="headline">Amazing performances near you</h1>
+                <h2 class="subtext">Discover the top live music events in the Southeast</h2>
                 <form class="hero-form" role="search">
                     <input class="input input-primary" type="text" placeholder="Enter your favorite artist or genre">
                     <select class="select primary-select" role="menu">
@@ -74,74 +58,75 @@
                 <li class="feature">Coming up</li>
                 <li class="feature">Near you</li>
             </ul>
-            <div class="events">
-                <div class="event">
-                    <img    src="/img/chesney-lg@3x.jpg" 
-                    srcset="/img/chesney-sm@3x.jpg 960w,
-                            /img/chesney-md@3x.jpg 2304w,
-                            /img/chesney-lg@3x.jpg 3840w"
-                    sizes=" (min-width: 1280px 260px,
-                            (min-width: 768px 260px,
-                            (min-width: 320px 280px,
-                            100vw"
-                    class="event-img"/>
-                    <dl class="event-title">
-                        <dt>COUNTRY</dt>
-                        <dd>Kenny Chesney w/ Grace Potter</dd>
-                    </dl>
-                    <dl class="event-desc">
-                        <dt>LOCATION</dt>
-                        <dt>PRICE</dt>
-                        <dd>Nashville, TN</dd>
-                        <dd>$30-260</dd>
-                    </dl>
-                </div>
-                <div class="event">
-                    <img    src="/img/sax-lg@3x.jpg" 
-                    srcset="/img/sax-sm@3x.jpg 960w,
-                            /img/sax-md@3x.jpg 2304w,
-                            /img/sax-lg@3x.jpg 3840w"
-                    sizes=" (min-width: 1280px 100vw,
-                            (min-width: 768px,
-                            (min-width: 320px,
-                            100vw"
-                            class="event-img"/>                            
-                    <dl class="event-title">
-                        <dt>JAZZ</dt>
-                        <dd>Gerald Albright Band</dd>
-                    </dl>
-                    <dl class="event-desc">
-                        <div class="local">
+            <a href="#">
+                <div class="events">
+                    <div class="event">
+                        <picture>
+                            <source srcset=""
+                            <img src="/img/chesney-lg@3x.jpg" class="event-img" />
+                        </picture>
+
+                        <h3 class="event-type">COUNTRY</h3>
+                        <h4 class="event-title">Kenny Chesney w/ Grace Potter</h4>
+                        <dl class="event-local">
                             <dt>LOCATION</dt>
-                            <dt>Altanta, GA</dt>
-                        </div>
-                        <div class="price">
+                            <dd>Nashville, TN</dd>                    
+                        </dl>
+                        <dl class="event-price">
+                            <dt>PRICE</dt>
+                            <dd>$30-260</dd>
+                        </dl>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="event">
+                        <img    src="/img/sax-lg@3x.jpg" 
+                        srcset="/img/sax-sm@3x.jpg 960w,
+                                /img/sax-md@3x.jpg 2304w,
+                                /img/sax-lg@3x.jpg 3840w"
+                        sizes=" (min-width: 1280px 100vw,
+                                (min-width: 768px,
+                                (min-width: 320px,
+                                100vw"
+                                class="event-img"/>                                                
+                        <h3 class="event-type">JAZZ</h3>
+                        <h4 class="event-title">Gerald Albright Band</h4>
+                        <dl class="event-local">
+                            <dt>LOCATION</dt>
+                            <dd>Altanta, GA</dd>
+                        </dl>
+                        <dl class="event-price">
                             <dt>PRICE</dt>
                             <dd>$15-90</dd>
-                        </div>
-                    </dl>
-                </div>
-                <div class="contentBox">
-                    <img    src="/img/keyboard-lg@3x.jpg" 
-                    srcset="/img/keyboard-sm@3x.jpg 960w,
-                            /img/keyboard-md@3x.jpg 2304w,
-                            /img/keyboard-lg@3x.jpg 3840w"
-                    sizes=" (min-width: 1280px 100vw,
-                            (min-width: 768px ,
-                            (min-width: 320px,
-                            100vw"
-                            class="event-img"/>                            
-                    <dl class="event-title">
-                        <dt>ELECTRONIC ROCK</dt>
-                        <dd>The Rock Church</dd>
-                    </dl>
-                    <dl class="event-desc">
-                        <dt>LOCATION</dt>
-                        <dt>PRICE</dt>
-                        <dd>Birmingham, AL</dd>           
-                        <dd>$20-40</dd>
-                    </dl>
-                </div>
+                        </dl>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="event">
+                        <img    src="/img/keyboard-lg@3x.jpg" 
+                        srcset="/img/keyboard-sm@3x.jpg 960w,
+                                /img/keyboard-md@3x.jpg 2304w,
+                                /img/keyboard-lg@3x.jpg 3840w"
+                        sizes=" (min-width: 1280px 100vw,
+                                (min-width: 768px ,
+                                (min-width: 320px,
+                                100vw"
+                                class="event-img"/>                            
+                        <h3 class="event-type">ELECTRONIC ROCK</h3>
+                        <h4 class="event-title">The Rock Church</h4>
+                        <dl class="event-local">
+                            <dt>LOCATION</dt>
+                            <dd>Birmingham, AL</dd>                        
+                        </dl>
+                        <dl class="event-price">
+                            <dt>PRICE</dt>
+                            <dd>$20-40</dd>
+                        </dl>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
             </div>
             <div class="btn-bottom">
                 <button class="btn btn-inverse pos-center">Discover more</button>

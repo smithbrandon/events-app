@@ -1,19 +1,17 @@
 ## Modifications To-Do List
-
-* add hover effects to buttons
-* add accessibility
-* Make SEO compatible
-* use aria to set main nav and footer
-* Remove With Container
-* Add Padding to links in nav
-* Events should be clickable
-* classes R==> L
-* Change px to rem or em
 * Set src for dynamic scaling
-* clear up all css
-* move wildcards to top
+
 
 * Meta Tags √
+* add accessibility √
+* Make SEO compatible
+* use aria to set main nav and footer
+* add hover effects to buttons √
+* Change px to rem or em √
+* Add Padding to links in nav √
+* clear up all css √
+* move wildcards to top √
+* Events should be clickable √
 * Remove Angular √
 * Title √
 * remove angular √
