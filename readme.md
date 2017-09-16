@@ -1,9 +1,7 @@
 ## Modifications To-Do List
-* Set src for dynamic scaling
-
-
 * Meta Tags √
 * add accessibility √
+* Set src for dynamic scaling √
 * Make SEO compatible
 * use aria to set main nav and footer
 * add hover effects to buttons √

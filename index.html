@@ -8,20 +8,18 @@
         <meta name="author" content="Brandon Smith">
         <!-- Facebook and Google+ Meta Tags -->
         <meta property="og:title" content="Aptaxle Events">
-        <meta property="og:image" content="/img/hero.jpg">
+        <meta property="og:image" content="/img/hero@3.jpg">
         <meta property="og:description" content="Discover the top live music events in the Southeast">
         <!-- Twitter Meta Tags -->
         <meta name="twitter:title" content="Aptaxle Events">
         <meta name="twitter:description" content="Discover the top live music events in the Southeast">
-        <meta name="twitter:image" content="/img/hero.jpg">
+        <meta name="twitter:image" content="/img/hero@3.jpg">
         <!-- Page Title -->
         <title>Aptaxle Events</title>
         
         <!-- Styling -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/tablet.css">
-        <link rel="stylesheet" href="/css/desktop.css">
     </head>
     <body>
         <header role="banner">
@@ -54,18 +52,17 @@
 
         <section class="content">
             <ul>
-                <li class="feature is-active">Most Popular</li>
-                <li class="feature">Coming up</li>
-                <li class="feature">Near you</li>
+                <li class="feature is-active" onclick=activate(this)>Most Popular</li>
+                <li class="feature" onclick=activate(this)>Coming up</li>
+                <li class="feature" onclick=activate(this)>Near you</li>
             </ul>
             <a href="#">
                 <div class="events">
                     <div class="event">
                         <picture>
-                            <source srcset=""
-                            <img src="/img/chesney-lg@3x.jpg" class="event-img" />
+                            <source srcset="/img/chesney-md@3x.jpg" media="(min-width: 520px) and (max-width: 1129px)"/>
+                            <img src="/img/chesney-lg@3x.jpg" class="event-img"/>
                         </picture>
-
                         <h3 class="event-type">COUNTRY</h3>
                         <h4 class="event-title">Kenny Chesney w/ Grace Potter</h4>
                         <dl class="event-local">
@@ -81,15 +78,7 @@
                 </a>
                 <a href="#">
                     <div class="event">
-                        <img    src="/img/sax-lg@3x.jpg" 
-                        srcset="/img/sax-sm@3x.jpg 960w,
-                                /img/sax-md@3x.jpg 2304w,
-                                /img/sax-lg@3x.jpg 3840w"
-                        sizes=" (min-width: 1280px 100vw,
-                                (min-width: 768px,
-                                (min-width: 320px,
-                                100vw"
-                                class="event-img"/>                                                
+                        <img srcset="/img/sax@3x.jpg" class="event-img"/>
                         <h3 class="event-type">JAZZ</h3>
                         <h4 class="event-title">Gerald Albright Band</h4>
                         <dl class="event-local">
@@ -105,15 +94,7 @@
                 </a>
                 <a href="#">
                     <div class="event">
-                        <img    src="/img/keyboard-lg@3x.jpg" 
-                        srcset="/img/keyboard-sm@3x.jpg 960w,
-                                /img/keyboard-md@3x.jpg 2304w,
-                                /img/keyboard-lg@3x.jpg 3840w"
-                        sizes=" (min-width: 1280px 100vw,
-                                (min-width: 768px ,
-                                (min-width: 320px,
-                                100vw"
-                                class="event-img"/>                            
+                        <img src="/img/keyboard@3x.jpg" class="event-img"/>                            
                         <h3 class="event-type">ELECTRONIC ROCK</h3>
                         <h4 class="event-title">The Rock Church</h4>
                         <dl class="event-local">
@@ -128,6 +109,7 @@
                     </div>
                 </a>
             </div>
+            <div class="clearfix"></div>
             <div class="btn-bottom">
                 <button class="btn btn-inverse pos-center">Discover more</button>
             </div>
@@ -146,5 +128,15 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript">
+
+                function activate(el){
+                    var features = document.getElementsByClassName('feature');
+                    for(var i=0;i< features.length; i++){
+                        features[i].classList.remove('is-active');
+                    }
+                    el.classList.add('is-active')
+                };
+        </script>
     </body>
 </html>
